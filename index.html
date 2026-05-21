@@ -135,6 +135,14 @@ canvas#wires { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
   -webkit-text-stroke: 1.5px rgba(240,236,228,.18);
 }
 
+.hero-hook {
+  margin-top: 18px;
+  font-size: clamp(12px, 1.4vw, 15px);
+  font-weight: 300; font-style: italic;
+  letter-spacing: .04em;
+  color: var(--grey);
+  opacity: 0; animation: lineIn 1s 1.05s forwards;
+}
 .hero-tagline {
   margin-top: 32px;
   font-size: clamp(14px, 1.8vw, 18px);
@@ -549,9 +557,9 @@ footer {
       <span class="ghost-line">IS BACK.</span>
     </h1>
     <p class="hero-tagline">Wear Your Sound.</p>
-  </div>
+    <p class="hero-hook">Are you bored with your plain white wired earbuds?</p>
   <div class="hero-meta">
-    <span class="hero-meta-label">First Drop</span>
+    <span class="hero-meta-label">Coming Soon</span>
     <span class="hero-meta-val">MMXXVI</span>
   </div>
   <div class="hero-scroll">
@@ -596,38 +604,62 @@ footer {
       </div>
       <div class="col-art">
         <div class="col-art-wrap" data-cin="art">
-          <svg viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Glow halo -->
-            <ellipse cx="140" cy="110" rx="70" ry="70" fill="rgba(192,132,252,.07)"/>
-            <ellipse cx="140" cy="110" rx="46" ry="46" fill="rgba(192,132,252,.06)"/>
-            <!-- Velvet body — soft rounded form with texture lines -->
-            <ellipse cx="140" cy="110" rx="36" ry="40" fill="#130c20" stroke="#c084fc" stroke-width="1.2"/>
-            <!-- Velvet texture — soft parallel lines -->
-            <path d="M116 96 Q128 90 140 94 Q152 90 164 96" stroke="#c084fc" stroke-width=".7" opacity=".35" fill="none" stroke-linecap="round"/>
-            <path d="M114 102 Q127 96 140 100 Q153 96 166 102" stroke="#c084fc" stroke-width=".7" opacity=".28" fill="none" stroke-linecap="round"/>
-            <path d="M113 108 Q126 102 140 106 Q154 102 167 108" stroke="#c084fc" stroke-width=".7" opacity=".22" fill="none" stroke-linecap="round"/>
-            <!-- Inner glow core -->
-            <circle cx="140" cy="110" r="14" fill="rgba(192,132,252,.18)"/>
-            <circle cx="140" cy="110" r="6" fill="#c084fc"/>
-            <!-- Pearl detail ring -->
-            <circle cx="140" cy="110" r="26" stroke="#c084fc" stroke-width=".5" stroke-dasharray="2 4" opacity=".4"/>
-            <!-- Pearl dots -->
-            <circle cx="140" cy="84" r="3.5" fill="#c084fc" opacity=".5"/>
-            <circle cx="166" cy="110" r="3" fill="#c084fc" opacity=".4"/>
-            <circle cx="114" cy="110" r="3" fill="#c084fc" opacity=".4"/>
-            <circle cx="140" cy="136" r="2.5" fill="#c084fc" opacity=".35"/>
-            <!-- Flowing cable — left -->
-            <path d="M125 148 C122 170, 104 180, 102 206 C100 228, 116 240, 140 246 C164 240, 180 228, 178 206 C176 180, 158 170, 155 148" stroke="#c084fc" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-            <!-- Velvet sheen on cable -->
-            <path d="M125 148 C122 170, 104 180, 102 206 C100 228, 116 240, 140 246 C164 240, 180 228, 178 206 C176 180, 158 170, 155 148" stroke="rgba(255,255,255,.08)" stroke-width="3" stroke-linecap="round" fill="none"/>
-            <!-- Y-split cable -->
-            <path d="M140 246 C140 278, 140 298, 140 322" stroke="#c084fc" stroke-width="2.2" stroke-linecap="round"/>
-            <!-- Jack -->
-            <rect x="131" y="322" width="18" height="28" rx="9" fill="#c084fc" opacity=".65"/>
-            <rect x="135" y="316" width="10" height="8" rx="2" fill="#c084fc" opacity=".4"/>
-            <!-- Subtle sparkle detail -->
-            <path d="M172 88 L173.5 91 L177 88 L173.5 85 Z" fill="#c084fc" opacity=".5"/>
-            <path d="M108 130 L109 132.5 L111.5 130 L109 127.5 Z" fill="#c084fc" opacity=".35"/>
+          <svg viewBox="0 0 260 482" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer atmospheric halos -->
+            <circle cx="130" cy="133" r="90" fill="rgba(192,132,252,.045)"/>
+            <circle cx="130" cy="133" r="80" fill="rgba(192,132,252,.03)"/>
+            <!-- ① Housing outer rim -->
+            <circle cx="130" cy="133" r="72" stroke="#c084fc" stroke-width="1.3" fill="rgba(192,132,252,.022)"/>
+            <!-- ② Housing inner edge / ear-cushion boundary -->
+            <circle cx="130" cy="133" r="63" stroke="#c084fc" stroke-width=".5" stroke-dasharray="2 5" opacity=".3"/>
+            <!-- ③ Ear-cushion pocket ring -->
+            <circle cx="130" cy="133" r="56" stroke="#c084fc" stroke-width=".75" opacity=".4"/>
+            <!-- ④ Radial spokes ×8 (cushion ring → driver plate gap) -->
+            <line x1="174" y1="133" x2="186" y2="133" stroke="#c084fc" stroke-width=".5" opacity=".32"/>
+            <line x1="161" y1="102" x2="169" y2="94"  stroke="#c084fc" stroke-width=".5" opacity=".32"/>
+            <line x1="130" y1="89"  x2="130" y2="77"  stroke="#c084fc" stroke-width=".5" opacity=".32"/>
+            <line x1="99"  y1="102" x2="91"  y2="94"  stroke="#c084fc" stroke-width=".5" opacity=".32"/>
+            <line x1="86"  y1="133" x2="74"  y2="133" stroke="#c084fc" stroke-width=".5" opacity=".32"/>
+            <line x1="99"  y1="164" x2="91"  y2="172" stroke="#c084fc" stroke-width=".5" opacity=".32"/>
+            <line x1="130" y1="177" x2="130" y2="189" stroke="#c084fc" stroke-width=".5" opacity=".32"/>
+            <line x1="161" y1="164" x2="169" y2="172" stroke="#c084fc" stroke-width=".5" opacity=".32"/>
+            <!-- ⑤ Driver mounting plate -->
+            <circle cx="130" cy="133" r="44" stroke="#c084fc" stroke-width="1" fill="rgba(192,132,252,.04)"/>
+            <!-- ⑥ Driver surround -->
+            <circle cx="130" cy="133" r="33" stroke="#c084fc" stroke-width=".8" opacity=".52"/>
+            <!-- ⑦ Membrane / cone -->
+            <circle cx="130" cy="133" r="22" stroke="#c084fc" stroke-width=".7" fill="rgba(192,132,252,.07)" opacity=".68"/>
+            <!-- ⑧ Voice coil -->
+            <circle cx="130" cy="133" r="13" stroke="#c084fc" stroke-width=".6" opacity=".44"/>
+            <!-- ⑨ Dust-cap glow + cap -->
+            <circle cx="130" cy="133" r="8"  fill="rgba(192,132,252,.22)"/>
+            <circle cx="130" cy="133" r="4.5" fill="#c084fc"/>
+            <!-- Crosshair -->
+            <line x1="116" y1="133" x2="144" y2="133" stroke="#c084fc" stroke-width=".4" opacity=".2"/>
+            <line x1="130" y1="119" x2="130" y2="147" stroke="#c084fc" stroke-width=".4" opacity=".2"/>
+            <!-- Pearl accent dots at cardinal rim points -->
+            <circle cx="130" cy="61"  r="2.5" fill="#c084fc" opacity=".5"/>
+            <circle cx="202" cy="133" r="2.5" fill="#c084fc" opacity=".42"/>
+            <circle cx="58"  cy="133" r="2.5" fill="#c084fc" opacity=".42"/>
+            <!-- Cable exit nozzle -->
+            <ellipse cx="130" cy="208" rx="5.5" ry="5" stroke="#c084fc" stroke-width="1" fill="rgba(192,132,252,.16)"/>
+            <!-- ─── BRAIDED CABLE — two interweaving strands ─── -->
+            <!-- Strand A (starts left, weaves right) -->
+            <path d="M127 213 Q132 220 127 227 Q122 234 127 241 Q132 248 127 255 Q122 262 127 269 Q132 276 127 283 Q122 290 127 297 Q132 304 127 311 Q122 318 127 325 Q132 332 127 339 Q122 346 127 353 Q132 360 127 367 Q122 374 127 381 Q132 388 127 395 Q122 402 127 409"
+              stroke="#c084fc" stroke-width="1.15" stroke-linecap="round" opacity=".7" fill="none"/>
+            <!-- Strand B (starts right, weaves left) -->
+            <path d="M133 213 Q128 220 133 227 Q138 234 133 241 Q128 248 133 255 Q138 262 133 269 Q128 276 133 283 Q138 290 133 297 Q128 304 133 311 Q138 318 133 325 Q128 332 133 339 Q138 346 133 353 Q128 360 133 367 Q138 374 133 381 Q128 388 133 395 Q138 402 133 409"
+              stroke="#c084fc" stroke-width="1.15" stroke-linecap="round" opacity=".7" fill="none"/>
+            <!-- Centre highlight -->
+            <line x1="130" y1="213" x2="130" y2="409" stroke="#c084fc" stroke-width=".3" opacity=".17"/>
+            <!-- ─── 3.5 mm JACK ─── -->
+            <!-- Jack body -->
+            <rect x="121" y="417" width="18" height="30" rx="9" stroke="#c084fc" stroke-width="1.1" fill="rgba(192,132,252,.13)"/>
+            <!-- Contact ring bands -->
+            <line x1="121" y1="430" x2="139" y2="430" stroke="#c084fc" stroke-width=".8" opacity=".55"/>
+            <line x1="121" y1="435" x2="139" y2="435" stroke="#c084fc" stroke-width=".8" opacity=".35"/>
+            <!-- Jack tip -->
+            <rect x="124.5" y="446" width="11" height="17" rx="5.5" stroke="#c084fc" stroke-width=".9" fill="rgba(192,132,252,.18)"/>
           </svg>
         </div>
       </div>
@@ -670,34 +702,58 @@ footer {
       </div>
       <div class="col-art">
         <div class="col-art-wrap" data-cin="art">
-          <svg viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Translucent geometric body -->
-            <ellipse cx="140" cy="110" rx="70" ry="70" fill="rgba(186,245,59,.05)"/>
-            <ellipse cx="140" cy="110" rx="46" ry="46" stroke="#baf53b" stroke-width=".4" fill="rgba(186,245,59,.04)" opacity=".5"/>
-            <!-- Main body — hard geometric, translucent -->
-            <ellipse cx="140" cy="110" rx="36" ry="40" fill="rgba(14,22,2,.8)" stroke="#baf53b" stroke-width="1.4"/>
-            <!-- Internal structure — rave-inspired geometric -->
-            <path d="M128 95 L140 80 L152 95 L152 125 L140 140 L128 125 Z" stroke="#baf53b" stroke-width=".7" fill="rgba(186,245,59,.06)" opacity=".6"/>
-            <!-- Lightning bolt driver detail -->
-            <path d="M137 93 L132 112 L139 112 L134 132" stroke="#baf53b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- Core glow -->
-            <circle cx="140" cy="110" r="6" fill="#baf53b"/>
-            <circle cx="140" cy="110" r="12" fill="rgba(186,245,59,.2)"/>
-            <!-- Rave refraction circles -->
-            <circle cx="140" cy="110" r="22" stroke="#baf53b" stroke-width=".5" opacity=".3"/>
-            <circle cx="140" cy="110" r="34" stroke="#baf53b" stroke-width=".4" stroke-dasharray="3 5" opacity=".2"/>
-            <!-- Cable with dash pattern — chaotic energy -->
-            <path d="M125 148 C122 170, 104 180, 102 206 C100 228, 116 240, 140 246 C164 240, 180 228, 178 206 C176 180, 158 170, 155 148" stroke="#baf53b" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="10 4"/>
+          <svg viewBox="0 0 260 482" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer atmospheric halos -->
+            <circle cx="130" cy="133" r="90" fill="rgba(186,245,59,.04)"/>
+            <circle cx="130" cy="133" r="80" fill="rgba(186,245,59,.025)"/>
+            <!-- ① Housing outer rim — hard bold line -->
+            <circle cx="130" cy="133" r="72" stroke="#baf53b" stroke-width="1.4" fill="rgba(186,245,59,.018)"/>
+            <!-- ② Housing inner edge — dashed (digital / translucent feel) -->
+            <circle cx="130" cy="133" r="63" stroke="#baf53b" stroke-width=".6" stroke-dasharray="4 4" opacity=".35"/>
+            <!-- ③ Ear-cushion pocket -->
+            <circle cx="130" cy="133" r="56" stroke="#baf53b" stroke-width=".75" opacity=".38"/>
+            <!-- ④ Driver mounting plate -->
+            <circle cx="130" cy="133" r="44" stroke="#baf53b" stroke-width="1" fill="rgba(186,245,59,.035)"/>
+            <!-- ⑤ Hexagonal driver cage (Digital Rebellion signature) -->
+            <polygon points="130,89 168,111 168,155 130,177 92,155 92,111"
+              stroke="#baf53b" stroke-width=".8" fill="rgba(186,245,59,.04)" opacity=".65"/>
+            <!-- Hex inner ring for cage depth -->
+            <polygon points="130,101 157,117 157,149 130,165 103,149 103,117"
+              stroke="#baf53b" stroke-width=".5" fill="none" opacity=".3"/>
+            <!-- ⑥ Driver surround -->
+            <circle cx="130" cy="133" r="30" stroke="#baf53b" stroke-width=".8" opacity=".5"/>
+            <!-- ⑦ Membrane -->
+            <circle cx="130" cy="133" r="20" stroke="#baf53b" stroke-width=".7" fill="rgba(186,245,59,.07)" opacity=".65"/>
+            <!-- ⑧ Voice coil -->
+            <circle cx="130" cy="133" r="12" stroke="#baf53b" stroke-width=".6" opacity=".42"/>
+            <!-- ⑨ Dust cap glow + cap -->
+            <circle cx="130" cy="133" r="8"  fill="rgba(186,245,59,.25)"/>
+            <circle cx="130" cy="133" r="4.5" fill="#baf53b"/>
+            <!-- PCB corner registration marks -->
+            <path d="M157 105 L163 105 L163 111" stroke="#baf53b" stroke-width=".7" fill="none" opacity=".5"/>
+            <path d="M157 161 L163 161 L163 155" stroke="#baf53b" stroke-width=".7" fill="none" opacity=".5"/>
+            <path d="M103 161 L97  161 L97  155" stroke="#baf53b" stroke-width=".7" fill="none" opacity=".5"/>
+            <path d="M103 105 L97  105 L97  111" stroke="#baf53b" stroke-width=".7" fill="none" opacity=".5"/>
+            <!-- Crosshair -->
+            <line x1="116" y1="133" x2="144" y2="133" stroke="#baf53b" stroke-width=".4" opacity=".22"/>
+            <line x1="130" y1="119" x2="130" y2="147" stroke="#baf53b" stroke-width=".4" opacity=".22"/>
+            <!-- Cable exit nozzle -->
+            <ellipse cx="130" cy="208" rx="5.5" ry="5" stroke="#baf53b" stroke-width="1" fill="rgba(186,245,59,.16)"/>
+            <!-- ─── BRAIDED CABLE ─── -->
+            <!-- Strand A -->
+            <path d="M127 213 Q132 220 127 227 Q122 234 127 241 Q132 248 127 255 Q122 262 127 269 Q132 276 127 283 Q122 290 127 297 Q132 304 127 311 Q122 318 127 325 Q132 332 127 339 Q122 346 127 353 Q132 360 127 367 Q122 374 127 381 Q132 388 127 395 Q122 402 127 409"
+              stroke="#baf53b" stroke-width="1.15" stroke-linecap="round" opacity=".7" fill="none"/>
+            <!-- Strand B -->
+            <path d="M133 213 Q128 220 133 227 Q138 234 133 241 Q128 248 133 255 Q138 262 133 269 Q128 276 133 283 Q138 290 133 297 Q128 304 133 311 Q138 318 133 325 Q128 332 133 339 Q138 346 133 353 Q128 360 133 367 Q138 374 133 381 Q128 388 133 395 Q138 402 133 409"
+              stroke="#baf53b" stroke-width="1.15" stroke-linecap="round" opacity=".7" fill="none"/>
             <!-- Cable glow -->
-            <path d="M125 148 C122 170, 104 180, 102 206 C100 228, 116 240, 140 246 C164 240, 180 228, 178 206 C176 180, 158 170, 155 148" stroke="rgba(186,245,59,.12)" stroke-width="8" stroke-linecap="round" fill="none"/>
-            <!-- Solid lower cable -->
-            <path d="M140 246 C140 278, 140 298, 140 322" stroke="#baf53b" stroke-width="2.2" stroke-linecap="round"/>
-            <!-- Jack -->
-            <rect x="131" y="322" width="18" height="28" rx="9" fill="#baf53b" opacity=".7"/>
-            <!-- Rave dots -->
-            <circle cx="102" cy="190" r="3" fill="#baf53b" opacity=".4"/>
-            <circle cx="178" cy="215" r="2.5" fill="#f5d800" opacity=".4"/>
-            <circle cx="100" cy="230" r="2" fill="#baf53b" opacity=".3"/>
+            <line x1="130" y1="213" x2="130" y2="409" stroke="#baf53b" stroke-width="5" opacity=".05"/>
+            <line x1="130" y1="213" x2="130" y2="409" stroke="#baf53b" stroke-width=".3" opacity=".17"/>
+            <!-- ─── 3.5 mm JACK ─── -->
+            <rect x="121" y="417" width="18" height="30" rx="9" stroke="#baf53b" stroke-width="1.1" fill="rgba(186,245,59,.12)"/>
+            <line x1="121" y1="430" x2="139" y2="430" stroke="#baf53b" stroke-width=".8" opacity=".55"/>
+            <line x1="121" y1="435" x2="139" y2="435" stroke="#baf53b" stroke-width=".8" opacity=".35"/>
+            <rect x="124.5" y="446" width="11" height="17" rx="5.5" stroke="#baf53b" stroke-width=".9" fill="rgba(186,245,59,.17)"/>
           </svg>
         </div>
       </div>
@@ -740,36 +796,89 @@ footer {
       </div>
       <div class="col-art">
         <div class="col-art-wrap" data-cin="art">
-          <svg viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Warm glow -->
-            <ellipse cx="140" cy="110" rx="70" ry="70" fill="rgba(240,192,64,.06)"/>
-            <!-- Retro studio body — larger, more substantial -->
-            <ellipse cx="140" cy="108" rx="38" ry="42" fill="#180e00" stroke="#f0c040" stroke-width="1.3"/>
-            <!-- Speaker grille mesh lines -->
-            <line x1="115" y1="100" x2="165" y2="100" stroke="#f0c040" stroke-width=".6" opacity=".22"/>
-            <line x1="113" y1="107" x2="167" y2="107" stroke="#f0c040" stroke-width=".6" opacity=".22"/>
-            <line x1="115" y1="114" x2="165" y2="114" stroke="#f0c040" stroke-width=".6" opacity=".22"/>
-            <!-- Vertical grille lines -->
-            <line x1="125" y1="87" x2="125" y2="129" stroke="#f0c040" stroke-width=".5" opacity=".18"/>
-            <line x1="140" y1="84" x2="140" y2="132" stroke="#f0c040" stroke-width=".5" opacity=".18"/>
-            <line x1="155" y1="87" x2="155" y2="129" stroke="#f0c040" stroke-width=".5" opacity=".18"/>
-            <!-- Center driver -->
-            <circle cx="140" cy="108" r="16" stroke="#f0c040" stroke-width=".8" fill="rgba(240,192,64,.06)" opacity=".6"/>
-            <circle cx="140" cy="108" r="8" fill="rgba(240,192,64,.2)"/>
-            <circle cx="140" cy="108" r="5" fill="#f0c040"/>
-            <!-- Retro coiled cable — the hero of this design -->
-            <path d="M140 150 C136 158, 144 164, 140 172 C136 180, 144 186, 140 194 C136 202, 144 208, 140 216 C136 224, 144 230, 140 238 C136 246, 144 252, 140 260 C136 268, 144 274, 140 282" stroke="#f0c040" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <!-- Coil glow -->
-            <path d="M140 150 C136 158, 144 164, 140 172 C136 180, 144 186, 140 194 C136 202, 144 208, 140 216 C136 224, 144 230, 140 238 C136 246, 144 252, 140 260 C136 268, 144 274, 140 282" stroke="rgba(240,192,64,.12)" stroke-width="7" stroke-linecap="round" fill="none"/>
-            <!-- Straight tail -->
-            <path d="M140 282 C140 296, 140 308, 140 322" stroke="#f0c040" stroke-width="2.2" stroke-linecap="round"/>
-            <!-- Jack -->
-            <rect x="131" y="322" width="18" height="28" rx="9" fill="#f0c040" opacity=".65"/>
-            <!-- Retro detail ring -->
-            <circle cx="140" cy="108" r="30" stroke="#f0c040" stroke-width=".5" stroke-dasharray="4 4" opacity=".25"/>
-            <!-- Warmth dots -->
-            <circle cx="115" cy="91" r="2.5" fill="#f0c040" opacity=".4"/>
-            <circle cx="165" cy="128" r="2" fill="#f0c040" opacity=".35"/>
+          <svg viewBox="0 0 260 482" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Clip grille lines to driver mounting plate -->
+              <clipPath id="grillClip">
+                <circle cx="130" cy="133" r="43"/>
+              </clipPath>
+            </defs>
+            <!-- Outer atmospheric halos -->
+            <circle cx="130" cy="133" r="90" fill="rgba(240,192,64,.045)"/>
+            <circle cx="130" cy="133" r="80" fill="rgba(240,192,64,.028)"/>
+            <!-- ① Housing outer rim — slightly thicker, retro weight -->
+            <circle cx="130" cy="133" r="72" stroke="#f0c040" stroke-width="1.4" fill="rgba(240,192,64,.022)"/>
+            <!-- ② Housing inner edge -->
+            <circle cx="130" cy="133" r="63" stroke="#f0c040" stroke-width=".5" stroke-dasharray="3 5" opacity=".28"/>
+            <!-- ③ Ear-cushion pocket -->
+            <circle cx="130" cy="133" r="56" stroke="#f0c040" stroke-width=".8" opacity=".38"/>
+            <!-- ④ Radial spokes ×8 -->
+            <line x1="174" y1="133" x2="186" y2="133" stroke="#f0c040" stroke-width=".5" opacity=".3"/>
+            <line x1="161" y1="102" x2="169" y2="94"  stroke="#f0c040" stroke-width=".5" opacity=".3"/>
+            <line x1="130" y1="89"  x2="130" y2="77"  stroke="#f0c040" stroke-width=".5" opacity=".3"/>
+            <line x1="99"  y1="102" x2="91"  y2="94"  stroke="#f0c040" stroke-width=".5" opacity=".3"/>
+            <line x1="86"  y1="133" x2="74"  y2="133" stroke="#f0c040" stroke-width=".5" opacity=".3"/>
+            <line x1="99"  y1="164" x2="91"  y2="172" stroke="#f0c040" stroke-width=".5" opacity=".3"/>
+            <line x1="130" y1="177" x2="130" y2="189" stroke="#f0c040" stroke-width=".5" opacity=".3"/>
+            <line x1="161" y1="164" x2="169" y2="172" stroke="#f0c040" stroke-width=".5" opacity=".3"/>
+            <!-- ⑤ Driver mounting plate -->
+            <circle cx="130" cy="133" r="44" stroke="#f0c040" stroke-width="1.1" fill="rgba(240,192,64,.035)"/>
+            <!-- ⑥ Vintage speaker grille — horizontal lines clipped to driver circle -->
+            <g clip-path="url(#grillClip)" opacity=".22">
+              <line x1="70" y1="104" x2="190" y2="104" stroke="#f0c040" stroke-width=".6"/>
+              <line x1="70" y1="111" x2="190" y2="111" stroke="#f0c040" stroke-width=".6"/>
+              <line x1="70" y1="118" x2="190" y2="118" stroke="#f0c040" stroke-width=".6"/>
+              <line x1="70" y1="126" x2="190" y2="126" stroke="#f0c040" stroke-width=".6"/>
+              <line x1="70" y1="133" x2="190" y2="133" stroke="#f0c040" stroke-width=".6"/>
+              <line x1="70" y1="140" x2="190" y2="140" stroke="#f0c040" stroke-width=".6"/>
+              <line x1="70" y1="148" x2="190" y2="148" stroke="#f0c040" stroke-width=".6"/>
+              <line x1="70" y1="155" x2="190" y2="155" stroke="#f0c040" stroke-width=".6"/>
+              <line x1="70" y1="162" x2="190" y2="162" stroke="#f0c040" stroke-width=".6"/>
+            </g>
+            <!-- ⑦ Driver surround (on top of grille) -->
+            <circle cx="130" cy="133" r="33" stroke="#f0c040" stroke-width=".9" opacity=".55" fill="rgba(240,192,64,.04)"/>
+            <!-- ⑧ Membrane -->
+            <circle cx="130" cy="133" r="22" stroke="#f0c040" stroke-width=".75" fill="rgba(240,192,64,.08)" opacity=".65"/>
+            <!-- ⑨ Voice coil -->
+            <circle cx="130" cy="133" r="13" stroke="#f0c040" stroke-width=".6" opacity=".42"/>
+            <!-- ⑩ Dust cap glow + cap -->
+            <circle cx="130" cy="133" r="8"   fill="rgba(240,192,64,.25)"/>
+            <circle cx="130" cy="133" r="4.5"  fill="#f0c040"/>
+            <!-- Crosshair -->
+            <line x1="116" y1="133" x2="144" y2="133" stroke="#f0c040" stroke-width=".4" opacity=".2"/>
+            <line x1="130" y1="119" x2="130" y2="147" stroke="#f0c040" stroke-width=".4" opacity=".2"/>
+            <!-- Cable exit nozzle -->
+            <ellipse cx="130" cy="208" rx="5.5" ry="5" stroke="#f0c040" stroke-width="1" fill="rgba(240,192,64,.16)"/>
+            <!-- ─── COILED CABLE (Studio 1998 signature) ─── -->
+            <!-- Coil glow pass -->
+            <path d="M130 213 L130 216
+              C139 216 139 222 130 228 C121 228 121 234 130 240
+              C139 240 139 246 130 252 C121 252 121 258 130 264
+              C139 264 139 270 130 276 C121 276 121 282 130 288
+              C139 288 139 294 130 300 C121 300 121 306 130 312
+              C139 312 139 318 130 324 C121 324 121 330 130 336
+              C139 336 139 342 130 348 C121 348 121 354 130 360
+              C139 360 139 366 130 372 C121 372 121 378 130 384
+              C139 384 139 390 130 396 C121 396 121 402 130 408
+              L130 412"
+              stroke="#f0c040" stroke-width="7" stroke-linecap="round" opacity=".07" fill="none"/>
+            <!-- Coil main stroke -->
+            <path d="M130 213 L130 216
+              C139 216 139 222 130 228 C121 228 121 234 130 240
+              C139 240 139 246 130 252 C121 252 121 258 130 264
+              C139 264 139 270 130 276 C121 276 121 282 130 288
+              C139 288 139 294 130 300 C121 300 121 306 130 312
+              C139 312 139 318 130 324 C121 324 121 330 130 336
+              C139 336 139 342 130 348 C121 348 121 354 130 360
+              C139 360 139 366 130 372 C121 372 121 378 130 384
+              C139 384 139 390 130 396 C121 396 121 402 130 408
+              L130 412"
+              stroke="#f0c040" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <!-- ─── 3.5 mm JACK ─── -->
+            <rect x="121" y="420" width="18" height="30" rx="9" stroke="#f0c040" stroke-width="1.1" fill="rgba(240,192,64,.13)"/>
+            <line x1="121" y1="433" x2="139" y2="433" stroke="#f0c040" stroke-width=".8" opacity=".55"/>
+            <line x1="121" y1="438" x2="139" y2="438" stroke="#f0c040" stroke-width=".8" opacity=".35"/>
+            <rect x="124.5" y="449" width="11" height="17" rx="5.5" stroke="#f0c040" stroke-width=".9" fill="rgba(240,192,64,.18)"/>
           </svg>
         </div>
       </div>
